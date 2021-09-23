@@ -1,0 +1,96 @@
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.gallery-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+/* Four Columns */
+.gallery-column {
+  flex: 25%;
+  padding: 0 4px;
+}
+/* Two Columns */
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* One Column */
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.center-crop {
+  height: 300px;
+  background-size: cover;
+  background-color: #222;
+  position: relative;
+  white-space: nowrap;
+}
+.center-crop img {
+  object-fit: cover;
+  width: 100%;
+  height: inherit;
+}
+.square-image {
+  object-fit: cover;
+  height: 13rem;
+  width: 100%;
+}
+.contained-image {
+  object-fit: cover;
+  width: 100%;
+  height: inherit;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+.price-text {
+  color: rgba(204, 0, 0, 0.65);
+}
+
+.cutout-container > h1 {
+  background-color: white;
+  color: black;
+  font-size: 10vw;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+
+
+  mix-blend-mode: screen;
+}
+
+/* Menu Color Customization */
+.nav-pills .nav-item .nav-link.bg-red { /* active */
+    background-color: rgba(204, 0, 0, 0.65);
+    color: white;
+}
+.nav-pills .nav-item .nav-link.bg-blue { /* active */
+    background-color: rgba(0, 153, 255, 0.65);
+    color: white;
+}
+.nav-pills .nav-item .nav-link.bg-green { /* active */
+    background-color: rgba(0, 153, 51, 0.65);
+    color: white;
+}
+.nav-pills .nav-item .nav-link:not(.active) {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
